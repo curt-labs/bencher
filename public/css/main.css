@@ -1,0 +1,76 @@
+/* line 1, ../sass/main.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #E5E5E5;
+  font-family: 'RobotoDraft', sans-serif;
+}
+
+/* line 7, ../sass/main.scss */
+core-header-panel {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 12, ../sass/main.scss */
+core-toolbar {
+  background: #03a9f4;
+  color: white;
+}
+
+/* line 16, ../sass/main.scss */
+paper-tabs {
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 23, ../sass/main.scss */
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+@media (min-width: 481px) {
+  /* line 28, ../sass/main.scss */
+  paper-tabs {
+    width: 200px;
+  }
+
+  /* line 31, ../sass/main.scss */
+  .container {
+    width: 400px;
+  }
+}
+/* line 36, ../sass/main.scss */
+[drawer] {
+  background-color: #B99588;
+  border-right: 1px solid #ccc;
+}
+/* line 40, ../sass/main.scss */
+[drawer] core-toolbar {
+  background-color: #795041;
+}
+
+/* line 45, ../sass/main.scss */
+[main] {
+  height: 100%;
+}
+/* line 48, ../sass/main.scss */
+[main] core-toolbar {
+  background-color: #4F7DC9;
+}
+
+/* line 53, ../sass/main.scss */
+.content {
+  height: 3000px;
+  background: linear-gradient(#d6e3e7, #72b9d1);
+}
+
+/* line 58, ../sass/main.scss */
+core-drawer-panel:not([narrow]) core-icon-button[icon=menu] {
+  display: none;
+}

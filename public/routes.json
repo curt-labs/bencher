@@ -1,0 +1,20 @@
+[{
+	"url":"http://goapi.curtmfg.com/vehicle",
+	"method": "post",
+	"params":[
+		{"key":"year","value":""},
+		{"key":"make","value":""},
+		{"key":"model","value":""},
+		{"key":"submodel","value":""}
+	]
+},
+{
+	"url":"http://goapi.curtmfg.com/vehicle",
+	"method": "post",
+	"params":[
+		{"key":"year","value":"2010"},
+		{"key":"make","value":""},
+		{"key":"model","value":""},
+		{"key":"submodel","value":""}
+	]
+}]
