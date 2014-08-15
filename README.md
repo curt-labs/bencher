@@ -1,4 +1,4 @@
-Curt Web Framework Starter Kit
+Bencher - HTTP Benchmark Utility
 --------------
 
 
