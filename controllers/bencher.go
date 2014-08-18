@@ -3,7 +3,6 @@ package bencher
 import (
 	"bytes"
 	"encoding/json"
-	"errors"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"net/http"
@@ -83,26 +82,26 @@ func (r *HttpRoute) Benchmark() HttpResult {
 
 func Run(c *gin.Context) {
 
-	if err := c.Req.ParseMultipartForm(10000); err != nil {
-		c.Fail(500, err)
-		return
-	}
+	// if err := c.Req.ParseMultipartForm(10000); err != nil {
+	// 	c.Fail(500, err)
+	// 	return
+	// }
 
-	m := c.Req.MultipartForm
-	if m == nil {
-		c.Fail(500, errors.New("failed to parse data"))
-		return
-	}
+	// m := c.Req.MultipartForm
+	// if m == nil {
+	// 	c.Fail(500, errors.New("failed to parse data"))
+	// 	return
+	// }
 
-	dt := m.File["file"][0]
-	file, err := dt.Open()
-	if err != nil {
-		c.Fail(500, err)
-		return
-	}
-	defer file.Close()
+	// dt := m.File["file"][0]
+	// file, err := dt.Open()
+	// if err != nil {
+	// 	c.Fail(500, err)
+	// 	return
+	// }
+	// defer file.Close()
 
-	f, err := ioutil.ReadAll(file)
+	f, err := ioutil.ReadFile("public/routes.json")
 	if err != nil {
 		c.Fail(500, err)
 		return

@@ -24,7 +24,7 @@ func main() {
 	}
 	r.LoadHTMLTemplates("templates/*")
 	r.ServeFiles("/public/*filepath", http.Dir(wd+"/public"))
-	r.POST("/run", bencher.Run)
+	r.GET("/run", bencher.Run)
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusFound, "layout.html", nil)
 	})
